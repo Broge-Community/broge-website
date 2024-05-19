@@ -1,0 +1,63 @@
+name: Deploy Broge Website
+
+permissions:
+  actions: write
+  id-token: write
+  pages: write
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: build it
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          ssh-key: ${{ secrets.THIS_KEY }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Format code
+        run: npm run format
+
+      - name: Build for deployment
+        run: npm run build
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: Deploy to GitHub Pages
+        run: |
+          # Configure git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Clone the target repository
+          git clone git@github.com:Broge-Community/broge-community.github.io.git
+          cd broge-community.github.io
+
+          # Remove existing files
+          git rm -rf .
+
+          # Copy new files from the build
+          cp -r ../dist/* .
+
+          # Commit and push changes
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push origin main

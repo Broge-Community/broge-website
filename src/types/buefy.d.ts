@@ -1,0 +1,39 @@
+// src/types/buefy.d.ts
+declare module 'buefy' {
+  import { App } from 'vue';
+  import {
+    BuefyConfig,
+    DialogProgrammatic,
+    ModalProgrammatic,
+    LoadingProgrammatic,
+    ToastProgrammatic,
+    SnackbarProgrammatic,
+    NotificationProgrammatic,
+    ConfigProgrammatic
+  } from 'buefy/src/components';
+
+  export declare type BuefyNamespace = {
+    dialog: typeof DialogProgrammatic;
+    loading: typeof LoadingProgrammatic;
+    modal: typeof ModalProgrammatic;
+    snackbar: typeof SnackbarProgrammatic;
+    toast: typeof ToastProgrammatic;
+    notification: typeof NotificationProgrammatic;
+  };
+
+  declare const _default: {
+    install(app: App, config: BuefyConfig): void;
+  };
+
+  export {
+    DialogProgrammatic,
+    LoadingProgrammatic,
+    ModalProgrammatic,
+    SnackbarProgrammatic,
+    ToastProgrammatic,
+    NotificationProgrammatic,
+    ConfigProgrammatic
+  };
+
+  export default _default;
+}

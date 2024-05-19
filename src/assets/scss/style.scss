@@ -1,0 +1,169 @@
+@import 'bulma/sass/_index.scss';
+  // Get Google Fonts
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&display=swap');
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Variables
+    --font-poetsen-one: "Poetsen One", sans-serif;
+    --font-oswald: "Oswald", sans-serif;
+
+    $primary: #3155f4;
+    $primary-invert: findColorInvert($primary);
+    $dark: findDarkColor($primary);
+    $light: #ffd202;
+    $link: $primary-invert;
+
+    // Adding custom Broge colors
+    // From Maurice
+    // Highlight
+    $light: #5c83ff;
+    // Body
+    $blue: #3156f4;
+    $blue-invert: findColorInvert($blue);
+    // Shadow
+    $shadow-color: #0e2daf;
+    // Outline
+    $border: #172960;
+    // Dark Fill
+    $dark: #09132d;
+    // Broge Red
+    $red: #e00052;
+    $red-invert: findColorInvert($red);
+    // Broge Pink
+    $pink: #ee27fe;
+    $pink-invert: findColorInvert($pink);
+    // Broge Orange
+    $orange: #ff7800;
+    $orange-invert: findColorInvert($orange);
+    // Broge Yellow
+    $yellow: #ffd200;
+    $yellow-invert: findColorInvert($yellow);
+    // Assigning custom colors to their associated variables
+    $custom-colors: (
+      'blue': (
+        $blue,
+        $blue-invert
+      ),
+      'red': (
+        $red,
+        $red-invert
+      ),
+      'pink': (
+        $pink,
+        $pink-invert
+      ),
+      'orange': (
+        $orange,
+        $orange-invert
+      ),
+      'yellow': (
+        $yellow,
+        $yellow-invert
+      )
+    );
+
+    $custom-colors: (
+      'orange': (
+        $orange,
+        $orange-invert
+      )
+    );
+
+    // settings background color
+    $background: $dark;
+
+
+  
+  // Fonts
+  // Poetsen One
+  .poetsen-one-regular {
+    font-family: var(--font-poetsen-one);
+    font-weight: 400;
+    font-style: normal;
+  }  
+  // Oswald
+  .oswald-regular {
+    font-family: var(--font-oswald);
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+    html {
+      scroll-padding-top: $navbar-height;
+      min-height: 100%;
+    }
+
+    body {
+      margin-bottom: auto;
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title-text{
+      font-family: var(--font-poetsen-one);
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .navbar {
+      border-bottom: 1px $primary solid;
+    }
+
+    footer.footer {
+      border-top: 1px $primary solid;
+    }
+
+    a.navbar-item.navbar-brand {
+      border-radius: 9999px;
+      background: url('../../assets/broge-logo.png') no-repeat center center;
+      background-size: cover;
+      height: 100px;
+      width: 100px;
+      margin: 10px 0 10px 10px;
+    }
+
+    div.navbar-brand a.navbar-burger.burger {
+      align-items: flex-start;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    div.navbar-menu.is-active div.navbar-start span#LongPageTitle {
+      display: none;
+    }
+
+    a.navbar-item,
+    .navbar-link {
+      background-color: unset;
+    }
+
+    a.navbar-item:hover {
+      text-decoration: underline;
+      text-shadow: 2px 2px 10px $light;
+    }
+
+    .router-link-active {
+      text-decoration: underline;
+    }
+
+    .button.is-primary {
+      background-color: $primary;
+    }
+
+    div#app main div.container {
+      margin-top: 135px;
+      height: 100%;
+    }
+  }
+}
