@@ -1,13 +1,12 @@
 @import 'bulma/sass/_index.scss';
-  // Get Google Fonts
-  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&display=swap');
-
+// Get Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&display=swap');
 
 @media (prefers-color-scheme: dark) {
   :root {
     // Variables
-    --font-poetsen-one: "Poetsen One", sans-serif;
-    --font-oswald: "Oswald", sans-serif;
+    --font-poetsen-one: 'Poetsen One', sans-serif;
+    --font-oswald: 'Oswald', sans-serif;
 
     $primary: #3155f4;
     $primary-invert: findColorInvert($primary);
@@ -74,23 +73,20 @@
     // settings background color
     $background: $dark;
 
+    // Fonts
+    // Poetsen One
+    .poetsen-one-regular {
+      font-family: var(--font-poetsen-one);
+      font-weight: 400;
+      font-style: normal;
+    }
+    // Oswald
+    .oswald-regular {
+      font-family: var(--font-oswald);
+      font-weight: 400;
+      font-style: normal;
+    }
 
-  
-  // Fonts
-  // Poetsen One
-  .poetsen-one-regular {
-    font-family: var(--font-poetsen-one);
-    font-weight: 400;
-    font-style: normal;
-  }  
-  // Oswald
-  .oswald-regular {
-    font-family: var(--font-oswald);
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  
     html {
       scroll-padding-top: $navbar-height;
       min-height: 100%;
@@ -98,7 +94,7 @@
 
     body {
       margin-bottom: auto;
-      font-family: "Oswald", sans-serif;
+      font-family: 'Oswald', sans-serif;
       font-weight: 400;
       font-style: normal;
     }
@@ -110,7 +106,7 @@
       padding: 0;
     }
 
-    .title-text{
+    .title-text {
       font-family: var(--font-poetsen-one);
       font-weight: 700;
       font-style: normal;
