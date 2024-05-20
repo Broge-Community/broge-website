@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <b-navbar ref="elementToMeasure" class="is-fixed-top ml-6 mr-6">
+  <b-navbar class="is-fixed-top">
     <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }" class="navbar-brand"></b-navbar-item>
     </template>
@@ -50,6 +50,13 @@
         class="is-size-5 has-text-weight-bold"
       >
         Socials
+      </b-navbar-item>
+      <b-navbar-item
+        tag="router-link"
+        :to="{ path: '/swap' }"
+        class="is-size-5 has-text-weight-bold"
+      >
+        Swap
       </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">

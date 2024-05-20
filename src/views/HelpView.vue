@@ -1,5 +1,3 @@
 <template>
-  <div class="help">
-    <h1>This is a help page</h1>
-  </div>
+  <div class="help-view">This is a help page</div>
 </template>
