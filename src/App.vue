@@ -17,8 +17,8 @@ import './assets/scss/style.scss';
         <RouterView />
       </div>
     </main>
-    <footer class="footer">
-      <div class="content has-text-centered">
+    <footer class="footer is-fixed-bottom">
+      <div class="container">
         <BrogeFooter />
       </div>
     </footer>
