@@ -13,7 +13,7 @@ import Aerodrome from './icons/IconAerodrome.vue';
       You can buy Broge from the top three Decentralized Exchanges on
       <a href="https://base.org" target="_blank">Base</a>!
     </p>
-    <nav class="level mt-5" style="border-top: 1px #3155f4 solid">
+    <div class="level mt-5" style="border-top: 1px #3155f4 solid">
       <div class="level-item has-text-centered">
         <div>
           <p class="title">
@@ -47,6 +47,6 @@ import Aerodrome from './icons/IconAerodrome.vue';
           </p>
         </div>
       </div>
-    </nav>
+    </div>
   </div>
 </template>
