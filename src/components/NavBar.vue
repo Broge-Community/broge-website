@@ -4,16 +4,35 @@
 </script>
 
 <template>
-  <b-navbar ref="elementToMeasure" class="is-fixed-top ml-6 mr-6">
+  <b-navbar class="is-fixed-top">
     <template #brand>
-      <b-navbar-item tag="router-link" :to="{ path: '/' }" class="navbar-brand"></b-navbar-item>
+      <b-navbar-item
+        tag="router-link"
+        :to="{ path: '/' }"
+        class="navbar-brand ml-5"
+      ></b-navbar-item>
+      <b-navbar-item
+        tag="router-link"
+        :to="{ path: '/' }"
+        class="is-hidden-desktop is-size-3 underlined has-text-weight-bold"
+      >
+        <span
+          class="title-text"
+          style="z-index: 10; left: 185px; position: fixed; text-decoration: underline"
+        >
+          Broge
+        </span>
+      </b-navbar-item>
     </template>
     <template #start>
       <b-navbar-item
         tag="router-link"
         :to="{ path: '/' }"
-        class="is-size-3 underlined has-text-weight-bold"
-        ><span id="LongPageTitle" class="title-text"> Broge: The Chillest Memecoin </span>
+        class="is-hidden-touch is-size-3 underlined has-text-weight-bold"
+      >
+        <span class="title-text" style="text-decoration: underline">
+          Broge: The Chillest Memecoin
+        </span>
       </b-navbar-item>
     </template>
     <template #end>
@@ -46,13 +65,13 @@
       </b-navbar-item>
       <b-navbar-item
         tag="router-link"
-        :to="{ path: '/socials' }"
+        :to="{ path: '/swap' }"
         class="is-size-5 has-text-weight-bold"
       >
-        Socials
+        Swap
       </b-navbar-item>
       <b-navbar-item tag="div">
-        <div class="buttons">
+        <div class="buttons mr-5">
           <button class="button is-primary" @click="$router.push('/buy')">Buy $Broge</button>
         </div>
       </b-navbar-item>

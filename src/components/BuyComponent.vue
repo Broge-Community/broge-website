@@ -6,15 +6,15 @@ import Uniswap from './icons/IconUniswap.vue';
 import Aerodrome from './icons/IconAerodrome.vue';
 </script>
 <template>
-  <div class="section">
+  <div class="section box">
     <h1 class="title">How to buy Broge</h1>
     <h2 class="subtitle">The many ways to get your Broge.</h2>
-    <p class="mt-2">
+    <p>
       You can buy Broge from the top three Decentralized Exchanges on
       <a href="https://base.org" target="_blank">Base</a>!
     </p>
-    <nav class="level mt-5" style="border-top: 1px #3155f4 solid">
-      <div class="level-item has-text-centered">
+    <div class="level mt-5" style="border-top: 1px #3155f4 solid">
+      <div class="level-item has-text-centered mt-4">
         <div>
           <p class="title">
             <a
@@ -31,8 +31,8 @@ import Aerodrome from './icons/IconAerodrome.vue';
             <a
               href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0xe8e55a847bb446d967ef92f4580162fb8f2d3f38"
               target="_blank"
-              ><Uniswap /> Uniswap</a
-            >
+              ><Uniswap /> Uniswap
+            </a>
           </p>
         </div>
       </div>
@@ -47,6 +47,6 @@ import Aerodrome from './icons/IconAerodrome.vue';
           </p>
         </div>
       </div>
-    </nav>
+    </div>
   </div>
 </template>
