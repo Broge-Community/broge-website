@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install
+        run: npm install && npm install --only=dev
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
 
       - name: Format code
