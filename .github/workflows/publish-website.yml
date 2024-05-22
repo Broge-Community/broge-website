@@ -27,18 +27,31 @@ jobs:
         with:
           node-version: 20
 
-      # - name: Cache Node.js modules
-      #   id: cache-node-modules
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ~/.npm
-      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-node-
+      - name: Cache Node.js modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         run: npm install && npm install --only=dev
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
+
+      - name: Check Prettier availability
+        id: check-prettier
+        run: |
+          if command -v prettier >/dev/null 2>&1; then
+            echo "::set-output name=prettier_available::true"
+          else
+            echo "::set-output name=prettier_available::false"
+          fi
+
+      - name: Install dependencies (retry)
+        run: npm install
+        if: steps.check-prettier.outputs.prettier_available != 'true'
 
       - name: Format code
         run: npm run format
