@@ -1,5 +1,8 @@
 <template>
-  <div class="socials">
-    <h1>This is a Swap page</h1>
+  <div class="swap-view">
+    <SwapComponent />
   </div>
 </template>
+<script setup lang="ts">
+import SwapComponent from '@/components/SwapComponent.vue';
+</script>
