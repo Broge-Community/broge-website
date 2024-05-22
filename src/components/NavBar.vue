@@ -65,13 +65,6 @@
       </b-navbar-item>
       <b-navbar-item
         tag="router-link"
-        :to="{ path: '/socials' }"
-        class="is-size-5 has-text-weight-bold"
-      >
-        Socials
-      </b-navbar-item>
-      <b-navbar-item
-        tag="router-link"
         :to="{ path: '/swap' }"
         class="is-size-5 has-text-weight-bold"
       >
