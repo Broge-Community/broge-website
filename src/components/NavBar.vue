@@ -38,13 +38,6 @@
     <template #end>
       <b-navbar-item
         tag="router-link"
-        :to="{ path: '/about' }"
-        class="is-size-5 has-text-weight-bold"
-      >
-        About
-      </b-navbar-item>
-      <b-navbar-item
-        tag="router-link"
         :to="{ path: '/tokenomics' }"
         class="is-size-5 has-text-weight-bold"
       >
