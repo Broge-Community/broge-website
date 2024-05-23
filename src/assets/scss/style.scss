@@ -114,6 +114,12 @@
     }
 
     .navbar {
+      background-color: hsl(
+        var(--bulma-link-h),
+        var(--bulma-link-s),
+        calc(var(--bulma-background-l) + var(--bulma-background-l-delta))
+      ) !important;
+      z-index: 1000;
       border-bottom: 1px $primary solid;
     }
 
