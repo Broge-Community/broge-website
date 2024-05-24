@@ -2,6 +2,9 @@
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "etsi0.class-collapse",
+    "rvest.vs-code-prettier-eslint",
+    "nomicfoundation.hardhat-solidity"
   ]
 }
