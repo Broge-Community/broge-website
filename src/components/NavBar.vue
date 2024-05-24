@@ -18,7 +18,7 @@
       >
         <span
           class="title-text"
-          style="z-index: 10; left: 185px; position: fixed; text-decoration: underline"
+          style="z-index: 10; right: 20px; position: fixed; text-decoration: underline"
         >
           Broge
         </span>
