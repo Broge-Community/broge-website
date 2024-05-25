@@ -38,25 +38,11 @@ import Aerodrome from './icons/IconAerodrome.vue';
             <span class="has-text-warning"><i class="fas fa-coins"></i></span> You can add to
             liquidity on some of the top Decenralized Exchanges (Dex) on Base!
           </li>
-          <li class="pl-6">
-            Doing so can earn you rewards thanks to fees!<br />
-            You could get more Broge than you put in over time!
-          </li>
+          <li class="pl-6">Doing so can earn you rewards thanks to fees!<br /></li>
         </ul>
       </div>
     </div>
     <div class="level mt-3">
-      <div class="level-item has-text-centered">
-        <div>
-          <p class="title">
-            <a
-              href="https://www.sushi.com/pool/add?chainId=8453&toCurrency=0xe8E55A847Bb446d967ef92F4580162fb8f2d3F38&fromCurrency=NATIVE"
-              target="_blank"
-              ><SushiSwap /> SushiSwap</a
-            >
-          </p>
-        </div>
-      </div>
       <div class="level-item has-text-centered">
         <div>
           <p class="title">
@@ -75,6 +61,17 @@ import Aerodrome from './icons/IconAerodrome.vue';
               href="https://aerodrome.finance/pools?type=&token0=eth&token1=0xe8e55a847bb446d967ef92f4580162fb8f2d3f38"
               target="_blank"
               ><Aerodrome /> Aerodrome</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="title">
+            <a
+              href="https://www.sushi.com/pool/add?chainId=8453&toCurrency=0xe8E55A847Bb446d967ef92F4580162fb8f2d3F38&fromCurrency=NATIVE"
+              target="_blank"
+              ><SushiSwap /> SushiSwap</a
             >
           </p>
         </div>
