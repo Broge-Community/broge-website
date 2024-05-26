@@ -21,7 +21,7 @@ function swapTwitterIcon(setX: boolean) {
       This website is released as open source under the MIT License.
       <div class="level has-text-centered">
         <div class="level-item is-size-3">
-          <a href="https://t.me/BrogePortal" target="_blank">
+          <a href="https://t.me/BrogeOnBase" target="_blank">
             <span class="icon has-text-white mr-4">
               <i class="fa-brands fa-telegram"></i>
             </span>
