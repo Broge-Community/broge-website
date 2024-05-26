@@ -26,7 +26,7 @@ function swapTwitterIcon(setX: boolean) {
               <i class="fa-brands fa-telegram"></i>
             </span>
           </a>
-          <a href="https://twitter.com/BrogeVip" target="_blank">
+          <a href="https://twitter.com/BrogeOnBase" target="_blank">
             <span class="icon has-text-white mr-4">
               <i
                 id="twitterIcon"
@@ -36,9 +36,24 @@ function swapTwitterIcon(setX: boolean) {
               ></i>
             </span>
           </a>
+          <a href="https://warpcast.com/broge01" target="_blank">
+            <span class="icon has-text-white mr-3 pt-5" style="width: 32px; height: 32px">
+              <img src="@/assets/farcaster-icon.svg" alt="Farcaster" />
+            </span>
+          </a>
+          <a href="https://tiktok.com/@broge.meme" target="_blank">
+            <span class="icon has-text-white mr-4">
+              <i class="fab fa-tiktok"></i>
+            </span>
+          </a>
           <a href="https://reddit.com/r/Broge" target="_blank">
             <span class="icon has-text-white mr-4">
               <i class="fab fa-reddit"></i>
+            </span>
+          </a>
+          <a href="https://trello.com/b/U4H5u08c/broge-community-plan" target="_blank">
+            <span class="icon has-text-white mr-4">
+              <i class="fab fa-trello"></i>
             </span>
           </a>
           <a href="https://github.com/broge-community/" target="_blank">
