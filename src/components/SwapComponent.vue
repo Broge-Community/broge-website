@@ -287,4 +287,9 @@ export default defineComponent({
   margin-right: 5px;
   vertical-align: middle;
 }
+
+.dropdown-content {
+  max-height: calc(25vh); /* Adjust the value as needed */
+  overflow-y: auto;
+}
 </style>
