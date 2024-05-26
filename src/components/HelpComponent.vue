@@ -38,7 +38,7 @@ import Aerodrome from './icons/IconAerodrome.vue';
             <span class="has-text-warning"><i class="fas fa-coins"></i></span> You can add to
             liquidity on some of the top Decenralized Exchanges (Dex) on Base!
           </li>
-          <li class="pl-6">Doing so can earn you rewards thanks to fees!<br /></li>
+          <li class="pl-5">Doing so can earn you rewards thanks to fees!<br /></li>
         </ul>
       </div>
     </div>
@@ -75,6 +75,17 @@ import Aerodrome from './icons/IconAerodrome.vue';
             >
           </p>
         </div>
+      </div>
+    </div>
+    <div class="level mt-5 pt-5 mb-0 pb-0" style="border-top: 1px #3155f4 solid">
+      <div class="has-text-left">
+        <ul>
+          <li>
+            <span class="has-text-success"><i class="fa-solid fa-circle-info"></i></span>&nbsp;If
+            the above links do not work, sign into the appropriate exchange and set the
+          </li>
+          <li class="pl-5">network to Base, then try the link again.</li>
+        </ul>
       </div>
     </div>
   </div>
