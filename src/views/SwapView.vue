@@ -5,5 +5,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import SwapComponent from '@/components/SwapComponent.vue';
+import SwapComponent from '@/components/SwapComponent/SwapComponent.vue';
 </script>
