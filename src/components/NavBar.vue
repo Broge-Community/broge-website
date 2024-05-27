@@ -56,7 +56,13 @@
         class="is-size-5 has-text-weight-bold"
         >How to help
       </b-navbar-item>
-      <!-- put swap link back wen ready -->
+      <b-navbar-item
+        tag="router-link"
+        :to="{ path: '/swap' }"
+        class="is-size-5 has-text-weight-bold"
+      >
+        Swap
+      </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons mr-5">
           <button class="button is-primary" @click="$router.push('/buy')">Buy $Broge</button>
