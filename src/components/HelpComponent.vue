@@ -1,19 +1,39 @@
-<!-- src/components/SushiSwapComponent.vue -->
+<!-- src/components/HelpComponent.vue -->
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import SushiSwap from './icons/IconSushiSwap.vue';
 import Uniswap from './icons/IconUniswap.vue';
 import Aerodrome from './icons/IconAerodrome.vue';
+
+const airdropAddress = ref('0x606185d3D418De51629eF320d8Ab6f9bE3B9C7Ec');
+const isHovered = ref(false);
+const isCopied = ref(false);
+
+const copyAirdropAddress = () => {
+  navigator.clipboard
+    .writeText(airdropAddress.value)
+    .then(() => {
+      console.log('Airdrop address copied to clipboard');
+      isCopied.value = true;
+      setTimeout(() => {
+        isCopied.value = false;
+      }, 2000);
+    })
+    .catch((error) => {
+      console.error('Failed to copy airdrop address: ', error);
+    });
+};
 </script>
+
 <template>
-  <div class="section box">
+  <div class="section box mb-5">
     <h1 class="title">How to help Broge</h1>
     <h2 class="subtitle mt-2">What can you do to help Broge?</h2>
-    <div clsas="content">
+    <div class="content">
       <p class="mt-5 pt-5" style="border-top: solid 1px #3155f4">
         There are many ways you can help Broge!
       </p>
-
       <ul>
         <li>
           <span class="has-text-warning"><i class="fas fa-coins"></i></span> You can always
@@ -23,9 +43,29 @@ import Aerodrome from './icons/IconAerodrome.vue';
           <span class="has-text-warning"><i class="fas fa-coins"></i></span> You could shill on
           socials!
           <ul>
-            <li class="pl-6">
+            <li class="pl-1">
               Use the tags <u><strong>$Broge</strong></u> and <u><strong>#Base!</strong></u
               >!
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="has-text-warning"><i class="fas fa-coins"></i></span> You could also donate
+          to our airdrop fund!
+          <ul>
+            <li class="pl-1">
+              <a
+                href="#"
+                @click.prevent="copyAirdropAddress"
+                @mouseover="isHovered = true"
+                @mouseout="isHovered = false"
+                class="copy-icon"
+                :class="{ inverted: isHovered || isCopied }"
+              >
+                {{ airdropAddress }}
+                <i class="far fa-copy ml-2"></i>
+                <span v-if="isCopied" class="tooltip">Address copied!</span>
+              </a>
             </li>
           </ul>
         </li>
@@ -36,7 +76,7 @@ import Aerodrome from './icons/IconAerodrome.vue';
         <ul>
           <li>
             <span class="has-text-warning"><i class="fas fa-coins"></i></span> You can add to
-            liquidity on some of the top Decenralized Exchanges (Dex) on Base!
+            liquidity on some of the top Decentralized Exchanges (Dex) on Base!
           </li>
           <li class="pl-5">Doing so can earn you rewards thanks to fees!<br /></li>
         </ul>
@@ -90,3 +130,38 @@ import Aerodrome from './icons/IconAerodrome.vue';
     </div>
   </div>
 </template>
+
+<style scoped>
+.copy-icon {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.copy-icon:hover {
+  color: #3155f4;
+}
+
+.copy-icon.inverted {
+  color: #3155f4;
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3155f4;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy-icon.inverted .tooltip {
+  opacity: 1;
+}
+</style>
