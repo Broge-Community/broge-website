@@ -41,7 +41,7 @@ function swapTwitterIcon(setX: boolean) {
               <img src="@/assets/farcaster-icon.svg" alt="Farcaster" />
             </span>
           </a>
-          <a href="https://tiktok.com/@broge.meme" target="_blank">
+          <a href="https://tiktok.com/@brogeonbase" target="_blank">
             <span class="icon has-text-white mr-4">
               <i class="fab fa-tiktok"></i>
             </span>
