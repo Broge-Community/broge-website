@@ -43,7 +43,7 @@ const copyAirdropAddress = () => {
           <span class="has-text-warning"><i class="fas fa-coins"></i></span> You could shill on
           socials!
           <ul>
-            <li class="pl-1">
+            <li>
               Use the tags <u><strong>$Broge</strong></u> and <u><strong>#Base!</strong></u
               >!
             </li>
@@ -53,7 +53,10 @@ const copyAirdropAddress = () => {
           <span class="has-text-warning"><i class="fas fa-coins"></i></span> You could also donate
           to our airdrop fund!
           <ul>
-            <li class="pl-1">
+            <li>
+              <a :href="'https://basescan.org/address/' + airdropAddress" target="_blank">
+                {{ airdropAddress }}
+              </a>
               <a
                 href="#"
                 @click.prevent="copyAirdropAddress"
@@ -62,7 +65,6 @@ const copyAirdropAddress = () => {
                 class="copy-icon"
                 :class="{ inverted: isHovered || isCopied }"
               >
-                {{ airdropAddress }}
                 <i class="far fa-copy ml-2"></i>
                 <span v-if="isCopied" class="tooltip">Address copied!</span>
               </a>
@@ -132,6 +134,11 @@ const copyAirdropAddress = () => {
 </template>
 
 <style scoped>
+.address-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .copy-icon {
   position: relative;
   display: inline-block;
