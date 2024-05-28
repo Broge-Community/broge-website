@@ -36,6 +36,9 @@
       </b-navbar-item>
     </template>
     <template #end>
+      <b-navbar-item tag="div" class="is-size-5 has-text-weight-bold">
+        <a href="https://wp.broge.meme" target="_blank" class="navbar-item">Whitepaper (Draft)</a>
+      </b-navbar-item>
       <b-navbar-item
         tag="router-link"
         :to="{ path: '/tokenomics' }"
