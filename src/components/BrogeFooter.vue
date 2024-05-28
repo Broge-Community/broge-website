@@ -1,4 +1,8 @@
+<!-- src/components/BrogeFooter.vue -->
+
 <script setup lang="ts">
+import { ref } from 'vue';
+
 function swapTwitterIcon(setX: boolean) {
   const twitterIcon = document.getElementById('twitterIcon');
   if (twitterIcon) {
@@ -11,14 +15,50 @@ function swapTwitterIcon(setX: boolean) {
     }
   }
 }
+
+const contractAddress = ref('0xe8e55a847bb446d967ef92f4580162fb8f2d3f38');
+const isHovered = ref(false);
+const isCopied = ref(false);
+
+const copyContractAddress = () => {
+  navigator.clipboard
+    .writeText(contractAddress.value)
+    .then(() => {
+      console.log('Contract address copied to clipboard');
+      isCopied.value = true;
+      setTimeout(() => {
+        isCopied.value = false;
+      }, 2000);
+    })
+    .catch((error) => {
+      console.error('Failed to copy contract address: ', error);
+    });
+};
 </script>
+
 <template>
   <div class="is-flex is-flex-direction-column">
     <div class="content has-text-centered">
       <strong>Broge</strong> was created by <strong>BrogeBoy</strong> and is maintained by the
       <strong>Broge Community</strong>.
       <br />
-      This website is released as open source under the MIT License.
+      <div class="mt-3 contract-address">
+        Contract:
+        <a :href="'https://basescan.org/token/' + contractAddress" target="_blank">
+          {{ contractAddress }}
+        </a>
+        <a
+          href="#"
+          @click.prevent="copyContractAddress"
+          @mouseover="isHovered = true"
+          @mouseout="isHovered = false"
+          class="copy-icon"
+          :class="{ inverted: isHovered || isCopied }"
+        >
+          <i class="far fa-copy ml-2"></i>
+          <span v-if="isCopied" class="tooltip">Address copied!</span>
+        </a>
+      </div>
       <div class="level has-text-centered">
         <div class="level-item is-size-3">
           <a href="https://t.me/BrogeOnBase" target="_blank">
@@ -107,10 +147,53 @@ function swapTwitterIcon(setX: boolean) {
     </div>
   </div>
 </template>
-<style>
+
+<style scoped>
+.contract-address {
+  font-size: inherit;
+}
+
+.address-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.copy-icon {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.copy-icon:hover {
+  color: #3155f4;
+}
+
+.copy-icon.inverted {
+  color: #3155f4;
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3155f4;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy-icon.inverted .tooltip {
+  opacity: 1;
+}
+
 .dext-image-container {
-  width: 32px; /* Adjust the width to your desired square size */
-  height: 32px; /* Adjust the height to your desired square size */
+  width: 32px;
+  height: 32px;
   overflow: hidden;
 }
 
@@ -122,8 +205,8 @@ function swapTwitterIcon(setX: boolean) {
 }
 
 .moontok-image-container {
-  width: 32px; /* Adjust the width to your desired square size */
-  height: 32px; /* Adjust the height to your desired square size */
+  width: 32px;
+  height: 32px;
   overflow: hidden;
 }
 
