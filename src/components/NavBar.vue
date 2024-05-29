@@ -1,4 +1,5 @@
-<!-- src/components/NavbarComponent.vue -->
+<!-- src/components/NavBar.vue -->
+
 <script setup lang="ts">
 // left empty intentionally
 </script>
@@ -36,6 +37,9 @@
       </b-navbar-item>
     </template>
     <template #end>
+      <b-navbar-item tag="div" class="is-size-5 has-text-weight-bold">
+        <a href="https://wp.broge.meme" target="_blank" class="navbar-item">Whitepaper (Draft)</a>
+      </b-navbar-item>
       <b-navbar-item
         tag="router-link"
         :to="{ path: '/tokenomics' }"
@@ -54,7 +58,8 @@
         tag="router-link"
         :to="{ path: '/help' }"
         class="is-size-5 has-text-weight-bold"
-        >How to help
+      >
+        How to help
       </b-navbar-item>
       <!--
         Temporarily disabled navigation to swap
@@ -75,6 +80,7 @@
     </template>
   </b-navbar>
 </template>
+
 <style>
 .localHide {
   display: none;
