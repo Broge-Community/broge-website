@@ -1,4 +1,5 @@
-<!-- src/components/NavbarComponent.vue -->
+<!-- src/components/NavBar.vue -->
+
 <script setup lang="ts">
 // left empty intentionally
 </script>
@@ -57,7 +58,8 @@
         tag="router-link"
         :to="{ path: '/help' }"
         class="is-size-5 has-text-weight-bold"
-        >How to help
+      >
+        How to help
       </b-navbar-item>
       <!--
         Temporarily disabled navigation to swap
@@ -78,6 +80,7 @@
     </template>
   </b-navbar>
 </template>
+
 <style>
 .localHide {
   display: none;
