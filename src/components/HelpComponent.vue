@@ -7,21 +7,39 @@ import Uniswap from './icons/IconUniswap.vue';
 import Aerodrome from './icons/IconAerodrome.vue';
 
 const airdropAddress = ref('0x606185d3D418De51629eF320d8Ab6f9bE3B9C7Ec');
-const isHovered = ref(false);
-const isCopied = ref(false);
+const marketingAddress = ref('0xca397c2c9325e481106C418fD4c01FFCcDF480D2');
+const isAirdropHovered = ref(false);
+const isMarketingHovered = ref(false);
+const isAirdropCopied = ref(false);
+const isMarketingCopied = ref(false);
 
 const copyAirdropAddress = () => {
   navigator.clipboard
     .writeText(airdropAddress.value)
     .then(() => {
       console.log('Airdrop address copied to clipboard');
-      isCopied.value = true;
+      isAirdropCopied.value = true;
       setTimeout(() => {
-        isCopied.value = false;
+        isAirdropCopied.value = false;
       }, 2000);
     })
     .catch((error) => {
       console.error('Failed to copy airdrop address: ', error);
+    });
+};
+
+const copyMarketingAddress = () => {
+  navigator.clipboard
+    .writeText(marketingAddress.value)
+    .then(() => {
+      console.log('Marketing address copied to clipboard');
+      isMarketingCopied.value = true;
+      setTimeout(() => {
+        isMarketingCopied.value = false;
+      }, 2000);
+    })
+    .catch((error) => {
+      console.error('Failed to copy marketing address: ', error);
     });
 };
 </script>
@@ -50,8 +68,8 @@ const copyAirdropAddress = () => {
           </ul>
         </li>
         <li>
-          <span class="has-text-warning"><i class="fas fa-coins"></i></span> You could also donate
-          to our airdrop fund!
+          <span class="has-text-warning"><i class="fas fa-coins"></i></span> You can donate to our
+          airdrop fund!
           <ul>
             <li>
               <a :href="'https://basescan.org/address/' + airdropAddress" target="_blank">
@@ -60,13 +78,35 @@ const copyAirdropAddress = () => {
               <a
                 href="#"
                 @click.prevent="copyAirdropAddress"
-                @mouseover="isHovered = true"
-                @mouseout="isHovered = false"
+                @mouseover="isAirdropHovered = true"
+                @mouseout="isAirdropHovered = false"
                 class="copy-icon"
-                :class="{ inverted: isHovered || isCopied }"
+                :class="{ inverted: isAirdropHovered || isAirdropCopied }"
               >
                 <i class="far fa-copy ml-2"></i>
-                <span v-if="isCopied" class="tooltip">Address copied!</span>
+                <span v-if="isAirdropCopied" class="tooltip">Address copied!</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="has-text-warning"><i class="fas fa-coins"></i></span> You could also donate
+          to our marketing fund!
+          <ul>
+            <li>
+              <a :href="'https://basescan.org/address/' + marketingAddress" target="_blank">
+                {{ marketingAddress }}
+              </a>
+              <a
+                href="#"
+                @click.prevent="copyMarketingAddress"
+                @mouseover="isMarketingHovered = true"
+                @mouseout="isMarketingHovered = false"
+                class="copy-icon"
+                :class="{ inverted: isMarketingHovered || isMarketingCopied }"
+              >
+                <i class="far fa-copy ml-2"></i>
+                <span v-if="isMarketingCopied" class="tooltip">Address copied!</span>
               </a>
             </li>
           </ul>
@@ -123,10 +163,11 @@ const copyAirdropAddress = () => {
       <div class="has-text-left">
         <ul>
           <li>
-            <span class="has-text-success"><i class="fa-solid fa-circle-info"></i></span>&nbsp;If
-            the above links do not work, sign into the appropriate exchange and set the
+            <span class="has-text-success"><i class="fa-solid fa-circle-info pr-2"></i></span>If the
+            above links do not work, sign into the appropriate exchange and set the
+            <br />
+            <span class="pl-5">network to Base, then try the link again.</span>
           </li>
-          <li class="pl-5">network to Base, then try the link again.</li>
         </ul>
       </div>
     </div>

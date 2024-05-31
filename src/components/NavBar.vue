@@ -61,6 +61,13 @@
       >
         How to help
       </b-navbar-item>
+      <b-navbar-item
+        tag="router-link"
+        :to="{ path: '/credits' }"
+        class="is-size-5 has-text-weight-bold"
+      >
+        Credits
+      </b-navbar-item>
       <!--
         Temporarily disabled navigation to swap
         Can still get there manually, but it doesn't work
