@@ -76,7 +76,7 @@ const copyContractAddress = () => {
               ></i>
             </span>
           </a>
-          <a href="https://warpcast.com/broge01" target="_blank">
+          <a href="https://warpcast.com/~/channel/broge" target="_blank">
             <span class="icon has-text-white mr-3 pt-5" style="width: 32px; height: 32px">
               <img src="@/assets/farcaster-icon.svg" alt="Farcaster" />
             </span>
