@@ -63,22 +63,11 @@
       </b-navbar-item>
       <b-navbar-item
         tag="router-link"
-        :to="{ path: '/credits' }"
-        class="is-size-5 has-text-weight-bold"
-      >
-        Credits
-      </b-navbar-item>
-      <!--
-        Temporarily disabled navigation to swap
-        Can still get there manually, but it doesn't work
-        <b-navbar-item
-        tag="router-link"
         :to="{ path: '/swap' }"
         class="is-size-5 has-text-weight-bold"
       >
         Swap
       </b-navbar-item>
-    -->
       <b-navbar-item tag="div">
         <div class="buttons mr-5">
           <button class="button is-primary" @click="$router.push('/buy')">Buy $Broge</button>
