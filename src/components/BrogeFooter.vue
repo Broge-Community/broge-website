@@ -66,7 +66,7 @@ const copyContractAddress = () => {
               <i class="fa-brands fa-telegram"></i>
             </span>
           </a>
-          <a href="https://twitter.com/BrogeOnBase" target="_blank">
+          <a href="https://twitter.com/Broge_On_Base" target="_blank">
             <span class="icon has-text-white mr-4">
               <i
                 id="twitterIcon"
