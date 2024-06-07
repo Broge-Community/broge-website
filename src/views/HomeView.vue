@@ -34,6 +34,13 @@
           <li>Be chill, always.</li>
         </ol>
       <p>Let's redefine what a meme coin can be. Welcome to Broge!</p>
+
+      <h2 class="subtitle">CoinGecko listing update requested to reflect the CTO</h2>
+      Request ID:<br />
+CU0706240041<br />
+Current Address(es):<br />
+https://www.coingecko.com/en/coins/broge<br />
+https://geckoterminal.com/base/pools/0x6A0586810898b07D22bd4F8BE59A36aa09de26A3
     </div>
   </div>
 </template>
