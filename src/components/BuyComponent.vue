@@ -28,7 +28,7 @@ const copyContractAddress = () => {
 </script>
 
 <template>
-  <div class="section box mb-6">
+  <div class="section box">
     <h1 class="title">How to buy Broge</h1>
     <h2 class="subtitle">The many ways to get your Broge.</h2>
     <p>
