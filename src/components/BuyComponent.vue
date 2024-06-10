@@ -5,6 +5,7 @@ import { ref } from 'vue';
 import SushiSwap from './icons/IconSushiSwap.vue';
 import Uniswap from './icons/IconUniswap.vue';
 import Aerodrome from './icons/IconAerodrome.vue';
+import Matcha from './icons/IconMatcha.vue';
 
 const contractAddress = ref('0xe8e55a847bb446d967ef92f4580162fb8f2d3f38');
 const isHovered = ref(false);
@@ -34,36 +35,49 @@ const copyContractAddress = () => {
       You can buy Broge from the top three Decentralized Exchanges on
       <a href="https://base.org" target="_blank">Base</a>!
     </p>
-    <div class="level mt-4" style="border-top: 1px #3155f4 solid">
-      <div class="level-item has-text-centered mt-4">
+    <div class="columns level mt-4" style="border-top: 1px #3155f4 solid">
+      <div class="column is-half level-item has-text-centered mt-4">
         <div>
           <p class="title">
             <a
               href="https://www.sushi.com/swap?chainId=8453&token0=NATIVE&token1=0xe8E55A847Bb446d967ef92F4580162fb8f2d3F38"
               target="_blank"
-              ><SushiSwap /> SushiSwap</a
+              ><SushiSwap class="icon" /> SushiSwap</a
             >
           </p>
         </div>
       </div>
-      <div class="level-item has-text-centered mt-4">
+      <div class="column is-half level-item has-text-centered mt-4">
         <div>
           <p class="title">
             <a
               href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0xe8e55a847bb446d967ef92f4580162fb8f2d3f38"
               target="_blank"
-              ><Uniswap /> Uniswap
+              ><Uniswap class="icon" /> Uniswap
             </a>
           </p>
         </div>
       </div>
-      <div class="level-item has-text-centered mt-4">
+    </div>
+    <div class="columns level mt-4" style="border-top: 1px #3155f4 solid">
+      <div class="column is-half level-item has-text-centered mt-4">
+        <div>
+          <p class="title">
+            <a
+              href="https://matcha.xyz/tokens/base/0xe8e55a847bb446d967ef92f4580162fb8f2d3f38?buyChain=8453&buyAddress=0xe8e55a847bb446d967ef92f4580162fb8f2d3f38"
+              target="_blank"
+              ><img src="@/assets/matcha.png" class="icon" /> Matcha</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column is-half level-item has-text-centered mt-4">
         <div>
           <p class="title">
             <a
               href="https://aerodrome.finance/swap?from=eth&to=0xe8e55a847bb446d967ef92f4580162fb8f2d3f38"
               target="_blank"
-              ><Aerodrome /> Aerodrome</a
+              ><Aerodrome class="icon" /> Aerodrome</a
             >
           </p>
         </div>
@@ -96,6 +110,13 @@ const copyContractAddress = () => {
 </template>
 
 <style scoped>
+.icon {
+  display: block;
+  margin: 0 auto;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
 .address-link {
   text-decoration: none;
   color: inherit;

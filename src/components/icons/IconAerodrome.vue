@@ -1,7 +1,7 @@
 <template>
   <svg
     data-src="/aerodrome.svg"
-    class="injected-svg ml-2 mr-5 h-9 w-auto"
+    class="injected-svg w-auto"
     alt="Aerodrome Finance"
     src=""
     xmlns="http://www.w3.org/2000/svg"
