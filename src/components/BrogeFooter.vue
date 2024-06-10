@@ -105,13 +105,19 @@ const copyContractAddress = () => {
       </div>
       <div class="level has-text-centered">
         <div class="level-item">
+          <div class="mr-5">
+            <a href="https://coingecko.com/coins/broge" target="_blank">
+              <img src="@/assets/coingecko.svg" alt="CoinGecko" style="max-height: 32px" />
+            </a>
+          </div>
           <a
             href="https://dexscreener.com/base/0x6a0586810898b07d22bd4f8be59a36aa09de26a3"
             alt="DEXScreener"
             target="_blank"
-            class="mr-1"
+            class="mr-5"
           >
             <svg
+              style="position: relative; top: 4px"
               xmlns="http://www.w3.org/2000/svg"
               width="32px"
               height="32px"
@@ -128,7 +134,7 @@ const copyContractAddress = () => {
               ></path>
             </svg>
           </a>
-          <div class="dext-image-container">
+          <div class="dext-image-container mr-4">
             <a
               href="https://www.dextools.io/app/en/base/pair-explorer/0x6a0586810898b07d22bd4f8be59a36aa09de26a3?t=1710930343419"
               alt="DEXTools"

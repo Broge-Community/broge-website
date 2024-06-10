@@ -26,13 +26,18 @@
         <router-link to="/buy">Buy</router-link> pages.
       </p>
       <h2 class="subtitle">Community Tenets</h2>
-      <p>When the Broge CTO team first met, in order to ensure the success of the token, four community tenets were outlined and adopted from the very start. These are those tenets.</p>
-        <ol>
-          <li>Be transparent and clear to the communtiy, always.</li>
-          <li>All CTO-led development shall be open source.</li>
-          <li>The communtiy <strong><u>always</u></strong> has a voice.</li>
-          <li>Be chill, always.</li>
-        </ol>
+      <p>
+        When the Broge CTO team first met, in order to ensure the success of the token, four
+        community tenets were outlined and adopted from the very start. These are those tenets.
+      </p>
+      <ol>
+        <li>Be transparent and clear to the communtiy, always.</li>
+        <li>All CTO-led development shall be open source.</li>
+        <li>
+          The communtiy <strong><u>always</u></strong> has a voice.
+        </li>
+        <li>Be chill, always.</li>
+      </ol>
       <p>Let's redefine what a meme coin can be. Welcome to Broge!</p>
     </div>
   </div>
