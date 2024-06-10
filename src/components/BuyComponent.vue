@@ -28,7 +28,7 @@ const copyContractAddress = () => {
 </script>
 
 <template>
-  <div class="section box">
+  <div class="section box mb-6">
     <h1 class="title">How to buy Broge</h1>
     <h2 class="subtitle">The many ways to get your Broge.</h2>
     <p>
@@ -66,7 +66,7 @@ const copyContractAddress = () => {
             <a
               href="https://matcha.xyz/tokens/base/0xe8e55a847bb446d967ef92f4580162fb8f2d3f38?buyChain=8453&buyAddress=0xe8e55a847bb446d967ef92f4580162fb8f2d3f38"
               target="_blank"
-              ><img src="@/assets/matcha.png" class="icon" /> Matcha</a
+              ><Matcha /> Matcha</a
             >
           </p>
         </div>
