@@ -1,11 +1,12 @@
 <!-- src/components/BuyComponent.vue -->
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import SushiSwap from './icons/IconSushiSwap.vue';
-import Uniswap from './icons/IconUniswap.vue';
-import Aerodrome from './icons/IconAerodrome.vue';
-import Matcha from './icons/IconMatcha.vue';
+import { ref, defineAsyncComponent } from 'vue';
+
+const SushiSwap = defineAsyncComponent(() => import('./icons/IconSushiSwap.vue'));
+const Uniswap = defineAsyncComponent(() => import('./icons/IconUniswap.vue'));
+const Aerodrome = defineAsyncComponent(() => import('./icons/IconAerodrome.vue'));
+const Matcha = defineAsyncComponent(() => import('./icons/IconMatcha.vue'));
 
 const contractAddress = ref('0xe8e55a847bb446d967ef92f4580162fb8f2d3f38');
 const isHovered = ref(false);

@@ -1,5 +1,5 @@
 <template>
-  <img src="@/assets/matcha.png" alt="Matcha" class="icon" />
+  <img src="@/assets/images/dex/matcha.png" alt="Matcha" class="icon" />
 </template>
 <style>
 .icon {
