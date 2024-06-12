@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/vue';
+//import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/vue';
 import { RouterView } from 'vue-router';
 import NavBar from './components/NavBar.vue';
 import BrogeFooter from './components/BrogeFooter.vue';
@@ -7,47 +7,47 @@ import './assets/scss/style.scss';
 
 //import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/vue';
 
-// 1. Your WalletConnect Cloud project ID
-const projectId = '3c00359caf8a688244bc9e2be238aacf';
+// // 1. Your WalletConnect Cloud project ID
+// const projectId = 'XXXXXX';
 
-// 2. Set chains
-const mainnet = {
-  chainId: 1,
-  name: 'Ethereum',
-  currency: 'ETH',
-  explorerUrl: 'https://etherscan.io',
-  rpcUrl: 'https://cloudflare-eth.com'
-};
+// // 2. Set chains
+// const mainnet = {
+//   chainId: 1,
+//   name: 'Ethereum',
+//   currency: 'ETH',
+//   explorerUrl: 'https://etherscan.io',
+//   rpcUrl: 'https://cloudflare-eth.com'
+// };
 
-// 3. Create your application's metadata object
-const metadata = {
-  name: 'BrogeSwap',
-  description: 'Web3Modal Example',
-  url: 'https://web3modal.com', // origin must match your domain & subdomain
-  icons: ['https://avatars.githubusercontent.com/u/37784886']
-};
+// // 3. Create your application's metadata object
+// const metadata = {
+//   name: 'BrogeSwap',
+//   description: 'Web3Modal Example',
+//   url: 'https://web3modal.com', // origin must match your domain & subdomain
+//   icons: ['https://avatars.githubusercontent.com/u/37784886']
+// };
 
-// 4. Create Ethers config
-const ethersConfig = defaultConfig({
-  /*Required*/
-  metadata
+// // 4. Create Ethers config
+// const ethersConfig = defaultConfig({
+//   /*Required*/
+//   metadata
 
-  /*Optional*/
-  // enableEIP6963: true, // true by default
-  // enableInjected: true, // true by default
-  // enableCoinbase: true, // true by default
-  // rpcUrl: '...' // used for the Coinbase SDK
-  // defaultChainId: 1, // used for the Coinbase SDK
-});
+//   /*Optional*/
+//   // enableEIP6963: true, // true by default
+//   // enableInjected: true, // true by default
+//   // enableCoinbase: true, // true by default
+//   // rpcUrl: '...' // used for the Coinbase SDK
+//   // defaultChainId: 1, // used for the Coinbase SDK
+// });
 
-// 5. Create a Web3Modal instance
-const modal = createWeb3Modal({
-  ethersConfig,
-  chains: [mainnet],
-  projectId,
-  enableAnalytics: true, // Optional - defaults to your Cloud configuration
-  enableOnramp: true // Optional - false as default
-});
+// // 5. Create a Web3Modal instance
+// const modal = createWeb3Modal({
+//   ethersConfig,
+//   chains: [mainnet],
+//   projectId,
+//   enableAnalytics: true, // Optional - defaults to your Cloud configuration
+//   enableOnramp: true // Optional - false as default
+// });
 </script>
 
 <template>
