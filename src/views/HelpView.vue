@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import BuyComponent from '../components/HelpComponent.vue';
+import HelpComponent from '../components/HelpComponent.vue';
 </script>
 
 <template>
   <div class="container is-centered">
     <div class="columns is-flex-direction-row is-justify-content-center">
-      <div class="column has-text-centered">
+      <div class="column has-text-centered is-flex is-align-items-center is-justify-content-center">
         <img
-          src="@/assets/broge-logo.png"
-          style="height: 300px; image-orientation: flip-x; border-radius: 9999999999px"
+          src="@/assets/images/broge/broge.png"
+          style="height: 500px; image-orientation: flip-x; border-radius: 25px"
           alt="Broge Frog!"
         />
       </div>
       <div class="column">
-        <BuyComponent />
+        <HelpComponent />
       </div>
     </div>
   </div>

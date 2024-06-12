@@ -1,0 +1,30 @@
+html {
+  scroll-padding-top: $navbar-height;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: auto;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+.title-text {
+  font-family: var(--font-poetsen-one);
+  font-weight: 700;
+  font-style: normal;
+}
+
+div#app main div.container {
+  margin-top: 135px;
+  height: 100%;
+}

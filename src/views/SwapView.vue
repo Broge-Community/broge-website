@@ -1,6 +1,6 @@
 <template>
   <div class="swap-view">
-    <h1>This is non-functional, it is a work in progress!</h1>
+    <h1 class="has-text-warning is-size-1">This is non-functional, it is a work in progress!</h1>
     <SwapComponent />
   </div>
 </template>

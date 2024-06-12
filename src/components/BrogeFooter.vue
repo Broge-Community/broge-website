@@ -55,7 +55,7 @@ const copyContractAddress = () => {
           class="copy-icon"
           :class="{ inverted: isHovered || isCopied }"
         >
-          <i class="far fa-copy ml-2"></i>
+          <font-awesome-icon :icon="['far', 'copy']" class="ml-2" />
           <span v-if="isCopied" class="tooltip">Address copied!</span>
         </a>
       </div>
@@ -63,42 +63,45 @@ const copyContractAddress = () => {
         <div class="level-item is-size-3">
           <a href="https://t.me/BrogeOnBase" target="_blank">
             <span class="icon has-text-white mr-4">
-              <i class="fa-brands fa-telegram"></i>
+              <font-awesome-icon :icon="['fab', 'telegram']" />
             </span>
           </a>
           <a href="https://twitter.com/Broge_On_Base" target="_blank">
             <span class="icon has-text-white mr-4">
-              <i
+              <font-awesome-icon
                 id="twitterIcon"
+                :icon="['fab', 'twitter']"
                 @mouseover="swapTwitterIcon(true)"
                 @mouseout="swapTwitterIcon(false)"
-                class="fab fa-twitter"
-              ></i>
+              />
             </span>
           </a>
           <a href="https://warpcast.com/~/channel/broge" target="_blank">
-            <span class="icon has-text-white mr-3 pt-0" style="width: 32px; height: 32px">
-              <img src="@/assets/farcaster-icon.svg" alt="Farcaster" />
+            <span
+              class="icon has-text-white mr-3 pt-0 mt-0 farcaster-icon"
+              style="width: 32px; height: 32px"
+            >
+              <img src="@/assets/images/icons/farcaster-icon.svg" alt="Farcaster" />
             </span>
           </a>
           <a href="https://tiktok.com/@brogeonbase" target="_blank">
             <span class="icon has-text-white mr-4">
-              <i class="fab fa-tiktok"></i>
+              <font-awesome-icon :icon="['fab', 'tiktok']" />
             </span>
           </a>
           <a href="https://reddit.com/r/Broge" target="_blank">
             <span class="icon has-text-white mr-4">
-              <i class="fab fa-reddit"></i>
+              <font-awesome-icon :icon="['fab', 'reddit']" />
             </span>
           </a>
           <a href="https://trello.com/b/U4H5u08c/broge-community-plan" target="_blank">
             <span class="icon has-text-white mr-4">
-              <i class="fab fa-trello"></i>
+              <font-awesome-icon :icon="['fab', 'trello']" />
             </span>
           </a>
           <a href="https://github.com/broge-community/" target="_blank">
             <span class="icon has-text-white mr-2">
-              <i class="fab fa-github"></i>
+              <font-awesome-icon :icon="['fab', 'github']" />
             </span>
           </a>
         </div>
@@ -107,7 +110,11 @@ const copyContractAddress = () => {
         <div class="level-item">
           <div class="mr-5">
             <a href="https://coingecko.com/coins/broge" target="_blank">
-              <img src="@/assets/coingecko.svg" alt="CoinGecko" style="max-height: 32px" />
+              <img
+                src="@/assets/images/icons/coingecko.svg"
+                alt="CoinGecko"
+                style="max-height: 32px"
+              />
             </a>
           </div>
           <a
@@ -140,12 +147,12 @@ const copyContractAddress = () => {
               alt="DEXTools"
               target="_blank"
             >
-              <img src="@/assets/dextools_logo_full_dark.svg" alt="DEXTools Logo" />
+              <img src="@/assets/images/icons/dextools_logo_full_dark.svg" alt="DEXTools Logo" />
             </a>
           </div>
           <div class="moontok-image-container">
             <a href="https://moontok.io/coins/broge" target="_blank">
-              <img src="@/assets/moontoklogo.svg" alt="Moontok" />
+              <img src="@/assets/images/icons/moontoklogo.svg" alt="Moontok" />
             </a>
           </div>
         </div>
@@ -221,5 +228,9 @@ const copyContractAddress = () => {
   height: 32px;
   object-fit: cover;
   object-position: left center;
+}
+
+.farcaster-icon {
+  margin-top: 10px; /* Adjust the value as needed */
 }
 </style>

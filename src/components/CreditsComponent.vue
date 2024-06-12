@@ -2,7 +2,7 @@
   <div class="section box">
     <div class="columns is-vcentered">
       <div class="column has-text-centered">
-        <i
+        <i class="has-text-warning"
           >Note that this page is definitely still under constructions (the same Broge meme image
           repeated? How silly!)</i
         >
@@ -33,6 +33,9 @@
 </template>
 
 <script setup lang="ts">
+import brogeLogo from '@/assets/images/broge/broge-logo.png';
+import brogeLogoLeft from '@/assets/images/broge/broge-logo-left.png';
+
 const credits = [
   { name: 'Chris', title: 'shill' },
   { name: 'Maurice', title: 'pix' },
@@ -41,15 +44,9 @@ const credits = [
   { name: 'FlyingMongoose', title: 'tech' }
 ];
 
-const imageSources = [
-  './src/assets/broge-logo.png',
-  './src/assets/broge-logo-left.png',
-  './src/assets/broge-logo.png',
-  './src/assets/broge-logo-left.png',
-  './src/assets/broge-logo.png'
-];
+const imageSources = [brogeLogo, brogeLogoLeft, brogeLogo, brogeLogoLeft, brogeLogo];
 
 const getImageSource = (index: number) => {
-  return imageSources[index] || './src/assets/broge-logo.png';
+  return imageSources[index] || brogeLogo;
 };
 </script>
