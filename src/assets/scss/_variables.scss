@@ -17,7 +17,7 @@ $shadow-color: #0e2daf;
 // Outline
 $border: #172960;
 // Dark Fill
-$dark: #09132d;
+$dark: #09132d; // Ensure this is the dark blue color you want
 // Broge Red
 $red: #e00052;
 $red-invert: findColorInvert($red);
@@ -62,4 +62,4 @@ $custom-colors: (
 );
 
 // settings background color
-$background: $dark;
+$background: $dark; // Ensure this is the dark blue color you want

@@ -8,6 +8,10 @@ body {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $background; // Apply the dark blue background color to the body
 }
 
 html,
@@ -24,7 +28,11 @@ body {
   font-style: normal;
 }
 
+div#app main {
+  flex: 1;
+  background-color: $background; // Ensure main content has the dark blue background color
+}
+
 div#app main div.container {
   margin-top: 135px;
-  height: 100%;
 }

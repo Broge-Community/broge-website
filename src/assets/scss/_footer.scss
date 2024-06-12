@@ -1,10 +1,12 @@
 footer {
   border-top: 1px $primary solid;
-  //max-height: 121px;
+  width: 100%;
 }
 
 footer.footer {
   padding: 0.5rem 1.5rem; // Adjust the padding as needed
+  margin-top: auto;
+  background-color: $background; // Ensure the footer has the dark blue background color
 }
 
 .footer .content {
