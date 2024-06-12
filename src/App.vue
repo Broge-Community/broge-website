@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/vue';
 import { RouterView } from 'vue-router';
 import NavBar from './components/NavBar.vue';
 import BrogeFooter from './components/BrogeFooter.vue';
 import './assets/scss/style.scss';
 
-import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/vue';
+//import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/vue';
 
 // 1. Your WalletConnect Cloud project ID
 const projectId = '3c00359caf8a688244bc9e2be238aacf';
