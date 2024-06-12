@@ -1,0 +1,65 @@
+// Variables
+$primary: #3155f4;
+$primary-invert: findColorInvert($primary);
+$dark: findDarkColor($primary);
+$light: #ffd202;
+$link: $primary-invert;
+
+// Adding custom Broge colors
+// From Maurice
+// Highlight
+$light: #5c83ff;
+// Body
+$blue: #3156f4;
+$blue-invert: findColorInvert($blue);
+// Shadow
+$shadow-color: #0e2daf;
+// Outline
+$border: #172960;
+// Dark Fill
+$dark: #09132d;
+// Broge Red
+$red: #e00052;
+$red-invert: findColorInvert($red);
+// Broge Pink
+$pink: #ee27fe;
+$pink-invert: findColorInvert($pink);
+// Broge Orange
+$orange: #ff7800;
+$orange-invert: findColorInvert($orange);
+// Broge Yellow
+$yellow: #ffd200;
+$yellow-invert: findColorInvert($yellow);
+// Assigning custom colors to their associated variables
+$custom-colors: (
+  'blue': (
+    $blue,
+    $blue-invert
+  ),
+  'red': (
+    $red,
+    $red-invert
+  ),
+  'pink': (
+    $pink,
+    $pink-invert
+  ),
+  'orange': (
+    $orange,
+    $orange-invert
+  ),
+  'yellow': (
+    $yellow,
+    $yellow-invert
+  )
+);
+
+$custom-colors: (
+  'orange': (
+    $orange,
+    $orange-invert
+  )
+);
+
+// settings background color
+$background: $dark;

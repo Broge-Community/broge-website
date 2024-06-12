@@ -1,0 +1,16 @@
+footer {
+  border-top: 1px $primary solid;
+  //max-height: 121px;
+}
+
+footer.footer {
+  padding: 0.5rem 1.5rem; // Adjust the padding as needed
+}
+
+.footer .content {
+  margin-bottom: 0.5rem; // Reduce the margin at the bottom of the content
+}
+
+.footer .level {
+  margin-bottom: 0.5rem; // Reduce the margin at the bottom of the level elements
+}

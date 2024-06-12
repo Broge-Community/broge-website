@@ -1,0 +1,42 @@
+.navbar {
+  background-color: hsl(
+    var(--bulma-link-h),
+    var(--bulma-link-s),
+    calc(var(--bulma-background-l) + var(--bulma-background-l-delta))
+  ) !important;
+  z-index: 1000;
+  border-bottom: 1px $primary solid;
+}
+
+a.navbar-item.navbar-brand {
+  border-radius: 9999px;
+  background: url('../../assets/images/broge/broge-logo.png') no-repeat center center;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  margin: 10px 0 10px 10px;
+}
+
+div.navbar-brand a.navbar-burger.burger {
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div.navbar-menu.is-active div.navbar-start span#LongPageTitle {
+  display: none;
+}
+
+a.navbar-item,
+.navbar-link {
+  background-color: unset;
+}
+
+a.navbar-item:hover {
+  text-decoration: underline;
+  text-shadow: 2px 2px 10px $light;
+}
+
+.router-link-active {
+  text-decoration: underline;
+}
