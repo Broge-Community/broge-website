@@ -1,5 +1,5 @@
 <template>
-  <div class="section box">
+  <div class="section box mb-3">
     <h1 class="title">White Paper</h1>
     <h2 class="subtitle">The plan</h2>
     <div class="level mb-5" style="border-top: 1px solid #3155f4">
