@@ -39,10 +39,11 @@ const copyContractAddress = () => {
 <template>
   <div class="is-flex is-flex-direction-column">
     <div class="content has-text-centered">
-      <strong>Broge</strong> was created by <strong>BrogeBoy</strong> and is maintained by the
-      <strong>Broge Community</strong>.
-      <br />
-      <div class="mt-3 contract-address">
+      <p class="broge-intro mb-0 pb-0">
+        <strong>Broge</strong> was created by <strong>BrogeBoy</strong> and is maintained by the
+        <strong>Broge Community</strong>.
+      </p>
+      <div class="mt-0 pt-0 contract-address">
         Contract:
         <a :href="'https://basescan.org/token/' + contractAddress" target="_blank">
           {{ contractAddress }}
@@ -59,7 +60,7 @@ const copyContractAddress = () => {
           <span v-if="isCopied" class="tooltip">Address copied!</span>
         </a>
       </div>
-      <div class="level has-text-centered">
+      <div class="level has-text-centered mb-0 pb-0">
         <div class="level-item is-size-3">
           <a href="https://t.me/BrogeOnBase" target="_blank">
             <span class="icon has-text-white mr-4">
@@ -157,14 +158,21 @@ const copyContractAddress = () => {
           </div>
         </div>
       </div>
+      <div class="level has-text-centered">
+        <div class="level-item small-footer has-text-centered">
+          <p>&copy; Broge is a <a href="https://degenstudios.media" target="_blank">Degen Studios</a> project.</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.contract-address {
-  font-size: inherit;
+
+.broge-intro {
+  margin-bottom: 0.1rem !important;
 }
+
 
 .address-link {
   text-decoration: none;
@@ -231,6 +239,18 @@ const copyContractAddress = () => {
 }
 
 .farcaster-icon {
-  margin-top: 10px; /* Adjust the value as needed */
+  margin-top: 5px; /* Adjust the value as needed */
+}
+
+.level.has-text-centered{
+  margin-top: -.2rem; /* Adjust this value to move the links up */
+}
+
+.small-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 1rem;
+  margin-top: -2px
 }
 </style>
